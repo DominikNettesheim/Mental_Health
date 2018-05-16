@@ -12,11 +12,62 @@
 
 </head>
 <body>
-<div>Project MH3</div>
+<div id="title">Project Mental Health Awareness & Ally Training</div>
 
-<button id="login" onclick="login()">Login</button>
+<button id="logInBtn" onclick="document.getElementById('login').style.display='block'">Login</button>
+<button onclick="document.getElementById('signUp').style.display='block'">Sign Up</button>
 
-<button id="signup" onclick="signUp()">Sign Up</button>
 
+<div id="signUp" class="modal">
+    <span onclick="document.getElementById('signUp').style.display='none'"
+          class="close" title="Close Modal">&times;</span>
+    <form class="modal-content" action="/action_page.php">
+        <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="signUp"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="signUp"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="signUp"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <div class="clearfix">
+                <button id="signUpSubmit" type="submit">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div id="login" class="modal">
+  <span onclick="document.getElementById('login').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+    <form class="modal-content animate" >
+
+        <div class="container">
+            <label for="login"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="login"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <div class="clearfix">
+                <button id="logInSubmit" type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>
