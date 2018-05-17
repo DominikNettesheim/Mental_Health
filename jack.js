@@ -1,5 +1,6 @@
 $(function() {
 
+
     $('#coverflow').coverflow({
         active: 2,
         select: function(event, ui){
