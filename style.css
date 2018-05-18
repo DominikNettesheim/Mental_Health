@@ -7,7 +7,9 @@
     border:0px;
 }
 /* cover flow styles */
-
+#coverflow {
+    display: ;
+}
 body{
     background: indianred;
 }
