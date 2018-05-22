@@ -17,11 +17,11 @@
 <div id="title">Project Mental Health Awareness & Ally Training</div>
 
 <button id="logInBtn" onclick="document.getElementById('login').style.display='block'">Login</button>
-<button onclick="document.getElementById('signUp').style.display='block'">Create An Account</button>
+<button id="signUpBtn" onclick="document.getElementById('signUp').style.display='block'">Create An Account</button>
 
 
 <div id="signUp" class="modal">
-    <span onclick="document.getElementById('signUp').style.display='none'"
+    <span id="closeX2" onclick="document.getElementById('signUp').style.display='none'"
           class="close" title="Close Modal">&times;</span>
     <form class="modal-content" action="/action_page.php">
         <div class="container">
@@ -50,7 +50,7 @@
 
 
 <div id="login" class="modal">
-  <span onclick="document.getElementById('login').style.display='none'"
+  <span id='closeX' onclick="document.getElementById('login').style.display='none'"
         class="close" title="Close Modal">&times;</span>
 
     <form class="modal-content animate" >
