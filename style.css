@@ -8,8 +8,7 @@
 }
 /* cover flow styles */
 #coverflow {
-    display: ;
-}
+display: block}
 body{
     background: indianred;
 }
@@ -67,6 +66,7 @@ button {
 
 button:hover {
     opacity:1;
+    cursor: pointer;
 }
 
 

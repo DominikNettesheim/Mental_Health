@@ -23,7 +23,7 @@
 <div id="signUp" class="modal">
     <span id="closeX2" onclick="document.getElementById('signUp').style.display='none'"
           class="close" title="Close Modal">&times;</span>
-    <form class="modal-content" action="/action_page.php">
+    <form class="modal-content" >
         <div class="container">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
@@ -38,12 +38,10 @@
             <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
             <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                <input type="checkbox" id="signUpChk" name="remember" style="margin-bottom:15px"> Remember me
             </label>
 
-            <div class="clearfix">
-                <button id="signUpSubmit" type="submit">Sign Up</button>
-            </div>
+            <button id="signUpSubmit" type="submit">Sign Up</button>
         </div>
     </form>
 </div>
@@ -53,25 +51,23 @@
   <span id='closeX' onclick="document.getElementById('login').style.display='none'"
         class="close" title="Close Modal">&times;</span>
 
-    <form class="modal-content animate" >
+    <form class="modal-content animate"  action="/action_page.php">
 
         <div class="container">
             <label for="login"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
-
             <label for="login"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
             <span class="psw">Forgot <a href="#">password?</a></span>
             <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
+                <input type="checkbox" id="logInChk" name="remember"> Remember me
             </label>
-            <div class="clearfix">
-                <button id="logInSubmit" type="submit">Login</button>
-            </div>
+
+            <button id="logInSubmit" type="submit">Login</button>
+
         </div>
     </form>
 </div>
-<div>
     <div id="coverflow">
         <img src="https://s.mxmcdn.net/images-storage/albums4/0/6/1/7/2/6/37627160_350_350.jpg" />
         <img src="https://cdn-images-1.medium.com/max/350/1*2xCm1x4ZpmEYsPOMAvRjJw.png" />
@@ -80,7 +76,6 @@
         <img src="https://s.mxmcdn.net/images-storage/albums4/0/6/1/7/2/6/37627160_350_350.jpg" />
         <img src=""/>
     </div>
-</div>
 <div id="coverflow-slider"></div>
 
 
