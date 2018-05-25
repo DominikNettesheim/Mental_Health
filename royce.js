@@ -6,6 +6,9 @@ function Disorder(image,message){
         this.stories.push(story);
     }
 }
+var abrvStart="<table><tr><td>";
+var abrv
+var cancel = "<span id='closeInfo' class=\"close\" title=\"Close Modal\">&times;</span>";
 var anorexia= new Disorder("http://www.masteradiccionesonline.com/media/anorexia985-350x350.jpg");
 var adhd =new Disorder("https://docassistillinois.org/wp-content/uploads/2018/03/ADHD.jpg");
 var depression = new Disorder("https://s.mxmcdn.net/images-storage/albums4/0/6/1/7/2/6/37627160_350_350.jpg");
@@ -48,5 +51,12 @@ $(document).ready(function() {
             console.log("anxst");
         }
         $('#information').html("hello").fadeIn("slow");
+        $('#exit').html(cancel).show();
+    });
+    $('#exit').on('click', function () {
+        console.log("bye");
+        $('#coverflow').show();
+        $('#information').hide();
+        $(this).hide();
     });
  });

@@ -209,3 +209,8 @@ hr {
     border-color: black;
     margin: auto;
 }
+#closeInfo{
+    position: absolute;
+    right:25px;
+    top:150px;
+}
