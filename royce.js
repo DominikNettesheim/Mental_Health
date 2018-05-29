@@ -1,19 +1,4 @@
-function Disorder(image,message){
-    this.stories= [];
-    this.image=image;
-    this.message =message;
-    function addStory(story){
-        this.stories.push(story);
-    }
-}
-var abrvStart="<table><tr><td>";
-var abrv
-var cancel = "<span id='closeInfo' class=\"close\" title=\"Close Modal\">&times;</span>";
-var anorexia= new Disorder("http://www.masteradiccionesonline.com/media/anorexia985-350x350.jpg");
-var adhd =new Disorder("https://docassistillinois.org/wp-content/uploads/2018/03/ADHD.jpg");
-var depression = new Disorder("https://s.mxmcdn.net/images-storage/albums4/0/6/1/7/2/6/37627160_350_350.jpg");
-var bipolar = new Disorder("https://www.cmeoutfitters.com/wp-content/uploads/2017/06/Featured_WC030series.jpg");
-var anxiety = new Disorder("https://www.traditionalacupuncture.com.au/CMS/wp-content/uploads/anxiety.jpg");
+
 $(document).ready(function() {
     $('#information').hide();
     $('#logInBtn').on('click', function(){
@@ -50,7 +35,7 @@ $(document).ready(function() {
         if(this.src ==anxiety.image) {
             console.log("anxst");
         }
-        $('#information').html("hello").fadeIn("slow");
+        $('#information').html("hello").fadeIn("slow").show();
         $('#exit').html(cancel).show();
     });
     $('#exit').on('click', function () {
@@ -59,4 +44,6 @@ $(document).ready(function() {
         $('#information').hide();
         $(this).hide();
     });
+    anorexia.addSymptom("New symptom");
+    console.log(anorexia.allSymptoms);
  });
