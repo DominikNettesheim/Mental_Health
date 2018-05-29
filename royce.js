@@ -46,4 +46,5 @@ $(document).ready(function() {
     });
     anorexia.addSymptom("New symptom");
     console.log(anorexia.allSymptoms);
+    console.log(depression.allBackground);
  });
