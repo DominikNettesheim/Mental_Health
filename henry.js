@@ -1,30 +1,23 @@
-$(document).ready(function () {
-    $('#signUpSubmit').on('click',function () {
-        username =  $("#userEmail").val();
-        password = $("#userPassword").val();
-        console.log(username,password, typeof(username), typeof(password));
-        createUser(username,password);
 
 
 
 
-    });
 
-
-});
 //
 
-function createUser(username,password){
+function userCreate() {
+    var username = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
-            "email": "myEmail@students.berkeley.net",
-            "password": "isilly"
+            "email": username,
+            "password": password
         }),
         dataType: 'json',
         success: function(data){
-            runMySuccessFunction(data);
+            console.log(data);
         },
         error: function(){
             alert("failed");
