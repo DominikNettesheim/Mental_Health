@@ -1,4 +1,4 @@
-
+var buttons = "<button id = 'symptoms'>Symptoms</button> <button id ='backGround'>Background</button>  <button id = 'treatments'>Treatments</button> <button id = 'causes'>Causes</button>"
 $(document).ready(function() {
     $('#information').hide();
     $('#logInBtn').on('click', function(){
@@ -21,21 +21,30 @@ $(document).ready(function() {
         $('#coverflow').fadeOut("slow");
         console.log(this.src);
         if(this.src == anorexia.image){
-            console.log("good");
+            $('#information').html(anorexia.name+ buttons).fadeIn("slow").show();
+            $('#symptoms').on('click',function(){
+                console.log("anorexia");
+
+            })
         }
         if(this.src ==adhd.image) {
-            console.log("Adhd");
+            $('#information').html(adhd.name + buttons).fadeIn("slow").show();
         }
         if(this.src ==depression.image) {
-            console.log("alex");
+            $('#information').html(depression.name+buttons).fadeIn("slow").show();
+            $('#symptoms').on('click',function(){
+                $('#information').html(depression.constructSymTable(depression.allSymptoms));
+            })
+            $('#backGround').on('click',function(){
+                $('#information').html(depression.constructBkgTable(depression.allBackground));
+            })
         }
         if(this.src ==bipolar.image) {
-            console.log("ty");
+            $('#information').html(bipolar.name+  buttons).fadeIn("slow").show();
         }
         if(this.src ==anxiety.image) {
-            console.log("anxst");
+            $('#information').html(anxiety.name+ buttons).fadeIn("slow").show();
         }
-        $('#information').html("hello").fadeIn("slow").show();
         $('#exit').html(cancel).show();
     });
     $('#exit').on('click', function () {
@@ -44,7 +53,4 @@ $(document).ready(function() {
         $('#information').hide();
         $(this).hide();
     });
-    anorexia.addSymptom("New symptom");
-    console.log(anorexia.allSymptoms);
-    console.log(depression.allBackground);
  });
