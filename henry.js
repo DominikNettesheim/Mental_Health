@@ -36,6 +36,7 @@ function login() {
         dataType: 'json',
         success: function(data){
             console.log(data);
+            window.location.replace("index.html?userId=" + data._id);
         },
         error: function(){
             alert("failed");
