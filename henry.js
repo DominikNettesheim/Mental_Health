@@ -35,6 +35,9 @@ function login() {
         type: 'GET',
         dataType: 'json',
         success: function(data){
+            if(data == null){
+                alert("Failed. Incorrect Login");
+            }
             console.log(data);
             window.location.replace("index.html?userId=" + data._id);
         },
