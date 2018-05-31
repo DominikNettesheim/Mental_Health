@@ -23,27 +23,77 @@ $(document).ready(function() {
         if(this.src == anorexia.image){
             $('#information').html(anorexia.name+ buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
-                console.log("anorexia");
-
-            })
+                $('#information').html(anorexia.constructSymTable(anorexia.allSymptoms));
+            });
+            $('#backGround').on('click',function(){
+                $('#information').html(anorexia.constructBkgTable(anorexia.allBackground));
+            });
+            $('#treatments').on('click',function(){
+                $('#information').html(anorexia.constructTreTable(anorexia.allTreatments));
+            });
+            $('#causes').on('click',function(){
+                $('#information').html(anorexia.constructCasTable(anorexia.allCauses));
+            });
         }
         if(this.src ==adhd.image) {
             $('#information').html(adhd.name + buttons).fadeIn("slow").show();
+            $('#symptoms').on('click',function(){
+                $('#information').html(adhd.constructSymTable(adhd.allSymptoms));
+            });
+            $('#backGround').on('click',function(){
+                $('#information').html(adhd.constructBkgTable(adhd.allBackground));
+            });
+            $('#treatments').on('click',function(){
+                $('#information').html(adhd.constructTreTable(adhd.allTreatments));
+            });
+            $('#causes').on('click',function(){
+                $('#information').html(adhd.constructCasTable(adhd.allCauses));
+            });
         }
         if(this.src ==depression.image) {
             $('#information').html(depression.name+buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(depression.constructSymTable(depression.allSymptoms));
-            })
+            });
             $('#backGround').on('click',function(){
                 $('#information').html(depression.constructBkgTable(depression.allBackground));
-            })
+            });
+            $('#treatments').on('click',function(){
+                $('#information').html(depression.constructTreTable(depression.allTreatments));
+            });
+            $('#causes').on('click',function(){
+                $('#information').html(depression.constructCasTable(depression.allCauses));
+            });
         }
         if(this.src ==bipolar.image) {
             $('#information').html(bipolar.name+  buttons).fadeIn("slow").show();
+            $('#symptoms').on('click',function(){
+                $('#information').html(bipolar.constructSymTable(bipolarbipolar.allSymptoms));
+            });
+            $('#backGround').on('click',function(){
+                $('#information').html(bipolar.constructBkgTable(bipolar.allBackground));
+            });
+            $('#treatments').on('click',function(){
+                $('#information').html(bipolar.constructTreTable(bipolar.allTreatments));
+            });
+            $('#causes').on('click',function(){
+                $('#information').html(bipolar.constructCasTable(bipolar.allCauses));
+            });
         }
         if(this.src ==anxiety.image) {
             $('#information').html(anxiety.name+ buttons).fadeIn("slow").show();
+            $('#symptoms').on('click',function(){
+                $('#information').html(anxiety.constructSymTable(anxiety.allSymptoms));
+            });
+            $('#backGround').on('click',function(){
+                $('#information').html(anxiety.constructBkgTable(anxiety.allBackground));
+            });
+            $('#treatments').on('click',function(){
+                $('#information').html(anxiety.constructTreTable(anxiety.allTreatments));
+            });
+            $('#causes').on('click',function(){
+                $('#information').html(anxiety.constructCasTable(anxiety.allCauses));
+            });
         }
         $('#exit').html(cancel).show();
     });
