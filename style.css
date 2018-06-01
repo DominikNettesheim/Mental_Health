@@ -203,11 +203,13 @@ hr {
     top: 150%;
 }
 #information{
-    width: 350px;
+    width: 600px;
     height: 350px;
     background-color: white;
     border-color: black;
     margin: auto;
+    text-align: center;
+    font-size: x-large;
 }
 #closeInfo{
     position: absolute;

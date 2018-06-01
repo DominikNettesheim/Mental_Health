@@ -21,7 +21,7 @@ $(document).ready(function() {
         $('#coverflow').fadeOut("slow");
         console.log(this.src);
         if(this.src == anorexia.image){
-            $('#information').html(anorexia.name+ buttons).fadeIn("slow").show();
+            $('#information').html(anorexia.name+buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(anorexia.constructSymTable(anorexia.allSymptoms));
             });
@@ -36,7 +36,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==adhd.image) {
-            $('#information').html(adhd.name + buttons).fadeIn("slow").show();
+            $('#information').html(adhd.name +buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(adhd.constructSymTable(adhd.allSymptoms));
             });
@@ -66,7 +66,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==bipolar.image) {
-            $('#information').html(bipolar.name+  buttons).fadeIn("slow").show();
+            $('#information').html(bipolar.name+buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(bipolar.constructSymTable(bipolarbipolar.allSymptoms));
             });
@@ -81,7 +81,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==anxiety.image) {
-            $('#information').html(anxiety.name+ buttons).fadeIn("slow").show();
+            $('#information').html(anxiety.name+buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(anxiety.constructSymTable(anxiety.allSymptoms));
             });
