@@ -72,7 +72,8 @@ $(document).ready(function() {
             $('#infoTittle').html(bipolar.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
-                $('#information').html(bipolar.constructSymTable(bipolarbipolar.allSymptoms));
+                $('#information').html(bipolar.constructSymTable(bipolar.allSymptoms));
+                console.log(bipolar.allSymptoms);
             });
             $('#backGround').on('click',function(){
                 $('#information').html(bipolar.constructBkgTable(bipolar.allBackground));
