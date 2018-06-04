@@ -21,7 +21,7 @@ $(document).ready(function() {
         $('#coverflow').fadeOut("slow");
         console.log(this.src);
         if(this.src == anorexia.image){
-            $('#infoTittle').html(anorexia.name);
+            $('#infoTittle').html(anorexia.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(anorexia.constructSymTable(anorexia.allSymptoms));
@@ -37,7 +37,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==adhd.image) {
-            $('#infoTittle').html(adhd.name);
+            $('#infoTittle').html(adhd.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(adhd.constructSymTable(adhd.allSymptoms));
@@ -53,7 +53,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==depression.image) {
-            $('#infoTittle').html(anorexia.name);
+            $('#infoTittle').html(depression.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(depression.constructSymTable(depression.allSymptoms));
@@ -69,7 +69,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==bipolar.image) {
-            $('#infoTittle').html(bipolar.name);
+            $('#infoTittle').html(bipolar.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(bipolar.constructSymTable(bipolarbipolar.allSymptoms));
@@ -85,7 +85,7 @@ $(document).ready(function() {
             });
         }
         if(this.src ==anxiety.image) {
-            $('#infoTittle').html(anxiety.name);
+            $('#infoTittle').html(anxiety.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(anxiety.constructSymTable(anxiety.allSymptoms));
@@ -107,5 +107,6 @@ $(document).ready(function() {
         $('#coverflow').show();
         $('#information').hide();
         $(this).hide();
+        $('#infoTittle').hide();
     });
  });
