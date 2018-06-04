@@ -21,7 +21,8 @@ $(document).ready(function() {
         $('#coverflow').fadeOut("slow");
         console.log(this.src);
         if(this.src == anorexia.image){
-            $('#information').html(anorexia.name+buttons).fadeIn("slow").show();
+            $('#infoTittle').html(anorexia.name);
+            $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(anorexia.constructSymTable(anorexia.allSymptoms));
             });
@@ -36,7 +37,8 @@ $(document).ready(function() {
             });
         }
         if(this.src ==adhd.image) {
-            $('#information').html(adhd.name +buttons).fadeIn("slow").show();
+            $('#infoTittle').html(adhd.name);
+            $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(adhd.constructSymTable(adhd.allSymptoms));
             });
@@ -51,7 +53,8 @@ $(document).ready(function() {
             });
         }
         if(this.src ==depression.image) {
-            $('#information').html(depression.name+buttons).fadeIn("slow").show();
+            $('#infoTittle').html(anorexia.name);
+            $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(depression.constructSymTable(depression.allSymptoms));
             });
@@ -66,7 +69,8 @@ $(document).ready(function() {
             });
         }
         if(this.src ==bipolar.image) {
-            $('#information').html(bipolar.name+buttons).fadeIn("slow").show();
+            $('#infoTittle').html(bipolar.name);
+            $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(bipolar.constructSymTable(bipolarbipolar.allSymptoms));
             });
@@ -81,7 +85,8 @@ $(document).ready(function() {
             });
         }
         if(this.src ==anxiety.image) {
-            $('#information').html(anxiety.name+buttons).fadeIn("slow").show();
+            $('#infoTittle').html(anxiety.name);
+            $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){
                 $('#information').html(anxiety.constructSymTable(anxiety.allSymptoms));
             });

@@ -24,7 +24,7 @@ function Disorder(image,name){
     this.constructSymTable =function(arry){
         var table = "<table border = '0'>";
         for(var i = 0; i < arry.length; i ++){
-            table += "<tr><td>" + this.allSymptoms[i]+ "</td></tr>"
+            table += "<tr><td>'/u2022'</td><td>" + this.allSymptoms[i]+ "</td></tr>"
         }
         table += "</table>";
         return table;

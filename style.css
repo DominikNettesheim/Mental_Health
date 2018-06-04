@@ -202,13 +202,17 @@ hr {
     position: absolute;
     top: 150%;
 }
+#infoTittle{
+    text-align: center;
+    font-size: x-large;
+    position: relative;
+}
 #information{
     width: 600px;
     height: 350px;
     background-color: white;
     border-color: black;
     margin: auto;
-    text-align: center;
     font-size: x-large;
 }
 #closeInfo{
