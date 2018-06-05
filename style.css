@@ -10,7 +10,7 @@
 #coverflow {
 display: block}
 body{
-    background: #ffec4a;
+    background: #36c3b9;
 }
 #title{
     font-size: xx-large;
@@ -178,7 +178,7 @@ hr {
 
 .close:hover,
 .close:focus {
-    color: yellow;
+    color: hotpink;
     cursor: pointer;
 }
 
