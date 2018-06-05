@@ -1,3 +1,4 @@
+var goBack = "<button id = 'goBack'>Back to options</button>";
 var buttons = "<button id = 'symptoms'>Symptoms</button> <button id ='backGround'>Background</button>  <button id = 'treatments'>Treatments</button> <button id = 'causes'>Causes</button><button id = 'stories'>Personal Stories</button>";
 $(document).ready(function() {
     $('#information').hide();
@@ -110,4 +111,7 @@ $(document).ready(function() {
         $(this).hide();
         $('#infoTittle').hide();
     });
+    $('#goBack').on('click',function (){
+        $('#')
+    })
  });
