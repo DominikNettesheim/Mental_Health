@@ -57,11 +57,12 @@ button {
     background-color: cornflowerblue;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin-top: 20px ;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    font-size: 20px;
 }
 
 button:hover {
@@ -204,12 +205,12 @@ hr {
 }
 #infoTittle{
     text-align: center;
-    font-size: x-large;
+    font-size: 30px;
     position: relative;
 }
 #information{
     width: 600px;
-    height: 350px;
+    height: 700px;
     background-color: white;
     border-color: black;
     margin: auto;
