@@ -142,7 +142,8 @@ button:hover {
 }
 #information{
     width: 600px;
-    height: 700px;
+    height: 350px;
+    background-color: #36c3b9;
     border-color: black;
     margin: auto;
     font-size: x-large;
