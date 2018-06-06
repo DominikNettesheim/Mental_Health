@@ -7,7 +7,7 @@ function Disorder(image,name,id){
     this.allBackground =[];
     this.allTreatments =[];
     this.allCauses = [];
-    this.goBack ="<button id ='" + id+"'>Back to options</button>";
+    this.goBack ="<button id ='" + id+"' class = 'backToOptns'>Back to options</button>";
     this.addSymptom = function(symptoms){
         this.allSymptoms =symptoms;
     };
@@ -28,7 +28,7 @@ function Disorder(image,name,id){
         for(var i = 0; i < arry.length; i ++){
             table += "<li>" + this.allSymptoms[i]+ "</li>"
         }
-        table += "</ul></td></tr></table>";
+        table += "</ul></td></tr><tr><td>" + this.goBack+ "</td></tr></table>";
         return table;
     };
     this.constructTreTable =function(arry){
@@ -36,7 +36,7 @@ function Disorder(image,name,id){
         for(var i = 0; i < arry.length; i ++){
             table += "<li>" + this.allTreatments[i]+ "</li>"
         }
-        table += "</ul></td></tr></table>";
+        table += "</ul></td></tr><tr><td>" + this.goBack+ "</td></tr></table>";
         return table;
     };
     this.constructCasTable =function(arry){
@@ -44,7 +44,7 @@ function Disorder(image,name,id){
         for(var i = 0; i < arry.length; i ++){
             table += "<li>" + this.allCauses[i]+ "</li>"
         }
-        table += "</ul></td></tr></table>";
+        table += "</ul></td></tr><tr><td>" + this.goBack+ "</td></tr></table>";
         return table;
     };
     this.constructBkgTable =function(arry){
@@ -52,7 +52,7 @@ function Disorder(image,name,id){
         for(var i = 0; i < arry.length; i ++){
             table += "<li>" + this.allBackground[i]+ "</li>"
         }
-        table += "</ul></td></tr></table>";
+        table += "</ul></td></tr><tr><td>" + this.goBack+ "</td></tr></table>";
         return table;
     }
 
@@ -71,7 +71,7 @@ adhd.addCauses(["Some people believe that ADHD behavior is caused by a lack of d
 adhd.addSymptom(["Overlook or miss details, make careless mistakes in school, at work, or other activities.","Have problems sustaining attention in tasks or play, including conversations, lectures, or readings.","Don’t seem to listen when they are directly spoken to.","Not following through on instructions.","Cannot seem to organize tasks or activities","Loses things easily and very forgetful.","Leaving their seats when it is expected for them to stay seated or fidgeting in their seats.","Not patient and has trouble waiting their turn.","Constantly in motion or 'on the go' and feeling restless."]);
 var depression = new Disorder("https://s.mxmcdn.net/images-storage/albums4/0/6/1/7/2/6/37627160_350_350.jpg", "Depression",1);
 depression.addBackground(["Depression is one of the most common mental illnesses.", "It affects 6.7% (more than 16 million) of American adults each year.","Depression can cause people to lose pleasure from daily life, complicate other medical conditions, and it can even be serious enough to lead to suicide","Only about a third (35.3%) of those suffering from severe depression seek treatment from a mental health professional, although the majority of people with depression have a full remission." , "Many people resist treatment because they believe depression isn't serious, that they can treat it themselves, or that it is a personal weakness rather than a serious medical illness"]);
-depression.addCauses(["Biological - People with depression may have too little or too much of certain brain chemicals, called 'neurotransmitters.'  Changes in these brain chemicals may cause or contribute to depression.", "Cognitive - People with negative thinking patterns and low self-esteem are more likely to develop clinical depression.","Gender - More women experience depression than men. The reasons behind this are still unclear, they may include the hormonal changes women go through during menstruation, pregnancy, childbirth and menopause.","Co-occurrence - Depression is more likely to occur along with certain illnesses, such as heart disease, cancer, Parkinson's disease, diabetes, Alzheimer's disease, Multiple Sclerosis, and hormonal disorders.","Medications - Many medications have side effects of depression.","Genetic - A family history of depression increases the risk for developing the illness. Some studies also suggest that a combination of genes and environmental factors work together to increase risk for depression. ", " Situational - Difficult life events, including divorce, financial problems, or the death of a loved one can contribute to depression."]);
+depression.addCauses(["Biological - People with depression may have too little or too much of certain brain chemicals, called 'neurotransmitters.'  Changes in these brain chemicals may cause or contribute to depression.", "Cognitive - People with negative thinking patterns and low self-esteem are more likely to develop clinical depression.","Gender - More women experience depression than men. The reasons behind this are still unclear, they may include the hormonal changes women go through during menstruation, pregnancy, childbirth and menopause.","Co-occurrence - Depression is more likely to occur along with certain illnesses, such as heart disease, cancer, Parkinson's disease, diabetes, Alzheimer's disease, Multiple Sclerosis, and hormonal disorders.","Medications - Many medications have side effects of depression.","Genetic - A family history of depression increases the risk for developing the illness. Some studies also suggest that a combination of genes and environmental factors work together to increase risk for depression. "]);
 depression.addSymptom(["Persistent sad, anxious or 'empty' mood","Sleeping too much or too little, waking up in the middle of the night or early in the morning.","Reduced appetite and weight loss, or increased appetite and weight gain.", "Loss of pleasure and interest in activities once enjoyed, including sex. ", "Restlessness and irritability.", "Persistent physical symptoms that do not respond to treatment (such as chronic pain or digestive disorders).", "Feeling guilty, hopeless, or worthless and thoughts about suicide or death." ]);
 depression.addTreatments(["The main treatment for depression is usually antidepressant medication, psychotherapy (talk therapy), or a combination of the two.","Research suggests these treatments may normalize brain changes associated with depression.","Many people hesitate to use antidepressant medication because of the side effects such as nausea, increased appetite and weight gain, loss of sexual desire and other sexual problems such as erectile dysfunction and decreased orgasm, fatigue and drowsiness, insomnia, dry mouth, blurred vision, and constipation.","As with many illnesses, early treatment is more effective and helps prevent the likelihood of serious recurrences.  Depression must be treated by a physician or qualified mental health professional.", "The majority of those who seek treatment show improvement in their depression."]);
 var bipolar = new Disorder("https://www.cmeoutfitters.com/wp-content/uploads/2017/06/Featured_WC030series.jpg", "Bipolar",2);
