@@ -86,7 +86,7 @@ $(document).ready(function() {
                 $('#information').html(bipolar.constructCasTable(bipolar.allCauses));
             });
         }
-        if(this.src ==anxiety.image) {
+        if(this.src == anxiety.image) {
             $('#infoTittle').html(anxiety.name).show();
             $('#information').html(buttons).fadeIn("slow").show();
             $('#symptoms').on('click',function(){

@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
-
+    var id = getParameterByName("userId");
     console.log(getParameterByName("userId"));
+    if(id !== null){
+        document.getElementById("id").innerHTML = "Your ID: " + getParameterByName("userId");
+        document.getElementById("jjj").innerHTML = "";
+    }
+
 
 });
 
@@ -39,7 +44,7 @@ function login() {
                 alert("Failed. Incorrect Login");
             }
             console.log(data);
-            window.location.replace("index.html?userId=" + data._id);
+            window.location.replace("index.html?userId=" + data._id)
         },
         error: function(){
             alert("failed");
