@@ -21,62 +21,14 @@ $(document).ready(function() {
     $('.photos').dblclick(function(){
         $('#coverflow').fadeOut("slow");
         console.log(this.src);
-        if(this.src == anorexia.image || $('#5').on('click')){
-            $('#infoTittle').html(anorexia.name).show();
-            $('#information').html(buttons).fadeIn("slow").show();
-            $('#symptoms').on('click',function(){
-                $('#information').html(anorexia.constructSymTable(anorexia.allSymptoms));
-                $('#infoTittle').html("Symptoms of Anorexia");
-            });
-            $('#backGround').on('click',function(){
-                $('#information').html(anorexia.constructBkgTable(anorexia.allBackground));
-            });
-            $('#treatments').on('click',function(){
-                $('#information').html(anorexia.constructTreTable(anorexia.allTreatments));
-            });
-            $('#causes').on('click',function(){
-                $('#information').html(anorexia.constructCasTable(anorexia.allCauses));
-            });
+        if(this.src == anorexia.image){
+         constructAnorexia();
         }
         if(this.src ==adhd.image) {
-            $('#infoTittle').html(adhd.name).show();
-            $('#information').html(buttons).fadeIn("slow").show();
-            $('#symptoms').on('click',function(){
-                $('#information').html(adhd.constructSymTable(adhd.allSymptoms));
-                $('#infoTittle').html("Symptoms of ADHD");
-            });
-            $('#backGround').on('click',function(){
-                $('#information').html(adhd.constructBkgTable(adhd.allBackground));
-                $('#infoTittle').html("Background information of ADHD")
-            });
-            $('#treatments').on('click',function(){
-                $('#information').html(adhd.constructTreTable(adhd.allTreatments));
-                $('#infoTittle').html("Treatments of ADHD");
-            });
-            $('#causes').on('click',function(){
-                $('#infoTittle').html("Causes of ADHD");
-                $('#information').html(adhd.constructCasTable(adhd.allCauses));
-            });
+           constructADHD()
         }
         if(this.src ==depression.image) {
-            $('#infoTittle').html(depression.name).show();
-            $('#information').html(buttons).fadeIn("slow").show();
-            $('#symptoms').on('click',function(){
-                $('#information').html(depression.constructSymTable(depression.allSymptoms));
-                $('#infoTittle').html("Symptoms of Depression");
-            });
-            $('#backGround').on('click',function(){
-                $('#information').html(depression.constructBkgTable(depression.allBackground));
-                $('#infoTittle').html("Background information of Depression")
-            });
-            $('#treatments').on('click',function(){
-                $('#information').html(depression.constructTreTable(depression.allTreatments));
-                $('#infoTittle').html("Treatments of Depression");
-            });
-            $('#causes').on('click',function(){
-                $('#information').html(depression.constructCasTable(depression.allCauses));
-                $('#infoTittle').html("Causes of Depression")
-            });
+            constructDepression();
         }
         if(this.src ==bipolar.image) {
             constructBipolar()
@@ -93,6 +45,7 @@ $(document).ready(function() {
         $(this).hide();
         $('#infoTittle').hide();
     });
+
  });
 function constructBipolar(){
     $('#infoTittle').html(bipolar.name).show();
@@ -100,19 +53,29 @@ function constructBipolar(){
     $('#symptoms').on('click',function(){
         $('#information').html(bipolar.constructSymTable(bipolar.allSymptoms));
         $('#infoTittle').html("Symptoms of Bipolar");
-        console.log(bipolar.allSymptoms);
-    });
+        $('#2a').on('click', function(){
+            constructBipolar();
+        });    });
     $('#backGround').on('click',function(){
         $('#information').html(bipolar.constructBkgTable(bipolar.allBackground));
-        $('#infoTittle').html("Background information of Bipolar")
+        $('#infoTittle').html("Background information on Bipolar");
+        $('#2a').on('click', function(){
+            constructBipolar();
+        });
     });
     $('#treatments').on('click',function(){
         $('#information').html(bipolar.constructTreTable(bipolar.allTreatments));
-        $('#infoTittle').html("Treatments of Bipolar");
+        $('#infoTittle').html("Treatments for Bipolar");
+        $('#2a').on('click', function(){
+            constructBipolar();
+        });
     });
     $('#causes').on('click',function(){
         $('#information').html(bipolar.constructCasTable(bipolar.allCauses));
-        $('#infoTittle').html("Causes of Bipolar")
+        $('#infoTittle').html("Causes of Bipolar");
+        $('#2a').on('click', function(){
+            constructBipolar();
+        });
     });
 
 }
@@ -122,19 +85,136 @@ function constructAnxiety(){
     $('#symptoms').on('click',function(){
         $('#information').html(anxiety.constructSymTable(anxiety.allSymptoms));
         $('#infoTittle').html("Symptoms of Anxiety");
+        $('#4a').on('click', function(){
+            constructAnxiety();
+        });
     });
     $('#backGround').on('click',function(){
         $('#information').html(anxiety.constructBkgTable(anxiety.allBackground));
-        $('#infoTittle').html("Background information of Anxiety")
+        $('#infoTittle').html("Background information on Anxiety");
+        $('#4a').on('click', function(){
+            constructAnxiety();
+        });
     });
     $('#treatments').on('click',function(){
         $('#information').html(anxiety.constructTreTable(anxiety.allTreatments));
-        $('#infoTittle').html("Treatments of Anxiety");
+        $('#infoTittle').html("Treatments for Anxiety");
+        $('#4a').on('click', function(){
+            constructAnxiety();
+        });
     });
     $('#causes').on('click',function(){
         $('#information').html(anxiety.constructCasTable(anxiety.allCauses));
-        $('#infoTittle').html("Causes of Anxiety")
+        $('#infoTittle').html("Causes of Anxiety");
+        $('#4a').on('click', function(){
+            constructAnxiety();
+        });
     });
-};
+}
 
-function
+function constructDepression() {
+    $('#infoTittle').html(depression.name).show();
+    $('#information').html(buttons).fadeIn("slow").show();
+    $('#symptoms').on('click', function () {
+        $('#information').html(depression.constructSymTable(depression.allSymptoms));
+        $('#infoTittle').html("Symptoms of Depression");
+        $('#1a').on('click', function(){
+            constructDepression();
+            console.log("bitch what");
+        });
+    });
+    $('#backGround').on('click', function () {
+        $('#information').html(depression.constructBkgTable(depression.allBackground));
+        $('#infoTittle').html("Background information on Depression");
+        $('#1a').on('click', function(){
+            constructDepression();
+            console.log("bitch what");
+        });
+    });
+    $('#treatments').on('click', function () {
+        $('#information').html(depression.constructTreTable(depression.allTreatments));
+        $('#infoTittle').html("Treatments for Depression");
+        $('#1a').on('click', function(){
+            constructDepression();
+            console.log("bitch what");
+        });
+    });
+    $('#causes').on('click', function () {
+        $('#information').html(depression.constructCasTable(depression.allCauses));
+        $('#infoTittle').html("Causes of Depression");
+        $('#1a').on('click', function(){
+            constructDepression();
+            console.log("bitch what");
+        });
+    });
+}
+
+function constructADHD (){
+    $('#infoTittle').html(adhd.name).show();
+    $('#information').html(buttons).fadeIn("slow").show();
+    $('#symptoms').on('click',function(){
+        $('#information').html(adhd.constructSymTable(adhd.allSymptoms));
+        $('#infoTittle').html("Symptoms of ADHD");
+        $('#3a').on('click', function(){
+            constructADHD();
+        });
+    });
+    $('#backGround').on('click',function(){
+        $('#information').html(adhd.constructBkgTable(adhd.allBackground));
+        $('#infoTittle').html("Background information on ADHD");
+        $('#3a').on('click', function(){
+            constructADHD();
+        });
+    });
+    $('#treatments').on('click',function(){
+        $('#information').html(adhd.constructTreTable(adhd.allTreatments));
+        $('#infoTittle').html("Treatments for ADHD");
+        $('#3a').on('click', function(){
+            constructADHD();
+        });
+    });
+    $('#causes').on('click',function(){
+        $('#infoTittle').html("Causes of ADHD");
+        $('#information').html(adhd.constructCasTable(adhd.allCauses));
+        $('#3a').on('click', function(){
+            constructADHD();
+        });
+    });
+}
+
+function constructAnorexia(){
+    $('#infoTittle').html(anorexia.name).show();
+    $('#information').html(buttons).fadeIn("slow").show();
+    $('#symptoms').on('click',function(){
+        $('#information').html(anorexia.constructSymTable(anorexia.allSymptoms));
+        $('#infoTittle').html("Symptoms of Anorexia");
+        $('#5a').on('click', function(){
+            constructAnorexia();
+        });
+    });
+    $('#backGround').on('click',function(){
+        $('#infoTittle').html("Background information on Anorexia");
+        $('#information').html(anorexia.constructBkgTable(anorexia.allBackground));
+        $('#5a').on('click', function(){
+            constructAnorexia();
+        });
+    });
+    $('#treatments').on('click',function(){
+        $('#infoTittle').html("Treatments for Anorexia");
+        $('#information').html(anorexia.constructTreTable(anorexia.allTreatments));
+        $('#5a').on('click', function(){
+            constructAnorexia();
+        });
+    });
+    $('#causes').on('click',function(){
+        $('#infoTittle').html("Causes of Anorexia");
+        $('#information').html(anorexia.constructCasTable(anorexia.allCauses));
+        $('#5a').on('click', function(){
+            constructAnorexia();
+        });
+    });
+}
+
+
+
+
