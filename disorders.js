@@ -54,9 +54,15 @@ function Disorder(image,name,id){
         }
         table += "</ul></td></tr><tr><td>" + this.goBack+ "</td></tr></table>";
         return table;
+    };
+    this.constructStories = function(){
+        return "<input id='story"+ id+"' type='text'>"+ this.goBack;
+
+
     }
 
 }
+var input = "<input id='' type='text'>"
 var cancel = "<span id='closeInfo' class=\"close\" title=\"Close Modal\">&times;</span>";
 
 var anorexia= new Disorder("http://www.masteradiccionesonline.com/media/anorexia985-350x350.jpg", "Anorexia","5a");
