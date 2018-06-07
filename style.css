@@ -1,7 +1,6 @@
 /* cover flow styles */
 .ui-coverflow-wrapper{
     height:400px;
-    margin-top: 200px;
 }
 .ui-state-active{
     border:0px;
@@ -15,7 +14,16 @@ body{
 }
 #title{
     font-size: xx-large;
+    position: relative;
+    top: 5%;
     text-align: center;
+
+}
+#funFact {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
 }
 div.scrollmenu {
     background-color: #333;
@@ -157,3 +165,4 @@ button:hover {
     top:150px;
 
 }
+
