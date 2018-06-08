@@ -56,7 +56,7 @@ function Disorder(image,name,id){
         return table;
     };
     this.constructStories = function(){
-        return "<input id='story"+ id+"' type='text'>"+ this.goBack;
+        return "<input id='story"+ id+"' type='text'><button id = 'submit"+id+"' class ='submitStory'>Submit story</button>"+this.goBack;
 
 
     }
