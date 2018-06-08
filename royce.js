@@ -19,6 +19,7 @@ $(document).ready(function() {
     });
 
     $('.photos').dblclick(function(){
+        $('#jjj').hide();
         $('#coverflow').fadeOut("slow");
         console.log(this.src);
         if(this.src == anorexia.image){
@@ -44,6 +45,7 @@ $(document).ready(function() {
         $('#information').hide();
         $(this).hide();
         $('#infoTittle').hide();
+        $('#jjj').show();
     });
 
  });
