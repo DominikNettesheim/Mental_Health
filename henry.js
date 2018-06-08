@@ -3,12 +3,23 @@ $(document).ready(function(){
     var id = getParameterByName("userId");
     console.log(getParameterByName("userId"));
     if(id !== null){
-        document.getElementById("id").innerHTML = "Your ID: " + getParameterByName("userId");
-        document.getElementById("jjj").innerHTML = "";
+        document.getElementById("id").innerHTML = "Logged in:  " + getParameterByName("userId");
+        document.getElementById("jjj").innerHTML = "<button class='btn' onclick='logout()'>Logout</button>";
     }
 
 
 });
+
+function addStory() {
+
+
+
+}
+
+function logout() {
+    window.location.replace("index.html");
+}
+
 
 function userCreate() {
     var username = document.getElementById('email').value;
@@ -23,7 +34,7 @@ function userCreate() {
         dataType: 'json',
         success: function(data){
             console.log(data);
-            window.location.replace("index.html?userId=" + data._id);
+            window.location.replace("index.html?userId=" + data.email);
         },
         error: function(){
             alert("failed");
@@ -44,7 +55,7 @@ function login() {
                 alert("Failed. Incorrect Login");
             }
             console.log(data);
-            window.location.replace("index.html?userId=" + data._id)
+            window.location.replace("index.html?userId=" + data.email)
         },
         error: function(){
             alert("failed");

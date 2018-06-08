@@ -7,6 +7,12 @@
 
 }
 /* cover flow styles */
+#id{
+    text-align: right;
+    position: relative;
+    margin-bottom: 75px;
+}
+
 #coverflow {
 display: block}
 body{
