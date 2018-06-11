@@ -79,6 +79,13 @@ function constructBipolar(){
             constructBipolar();
         });
     });
+    $('#stories').on('click', function(){
+        $('#infoTittle').html("Personal accounts of Bipolar");
+        $('#information').html(bipolar.constructStories());
+        $('#2a').on('click', function(){
+            constructBipolar();
+        });
+    })
 
 }
 function constructAnxiety(){
