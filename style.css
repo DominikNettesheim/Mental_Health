@@ -159,14 +159,21 @@ button:hover {
     text-align: center;
     font-size: x-large;
     position: relative;
+    margin-right: 25%;
+    margin-left: 25%;
 }
 #information{
-    width: 600px;
-    height: 350px;
+    width:50%;
+    height: 500px;
     background-color: #36c3b9;
     border-color: black;
-    margin: auto;
+    margin-left: 25%;
+    margin-right: 25%;
     font-size: x-large;
+    overflow: auto;
+
+
+
 }
 #closeInfo{
     position: absolute;
