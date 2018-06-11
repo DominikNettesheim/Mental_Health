@@ -10,11 +10,7 @@ $(document).ready(function(){
 
 });
 
-function addStory() {
 
-
-
-}
 
 function logout() {
     window.location.replace("index.html");
