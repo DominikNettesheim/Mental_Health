@@ -56,7 +56,15 @@ function Disorder(image,name,id){
         return table;
     };
     this.constructStories = function(){
-        return "<textarea id='story"+ id+"' rows='5' cols='201' class ='submitStory'></textarea><button id = 'submit"+id+"'  onclick='addStory()'>Submit story</button>"+this.goBack;
+        return "<textarea id='story"+ id+"' rows='5' cols='201' class ='submitStory'></textarea><button id = 'submitStories' '>Submit story</button><button id ='seeStory"+id+"'>See Stories</button>" +this.goBack;
+    };
+    this.showStories = function(stories){
+        var table = "<table border = '0'><tr><td><ul>";
+        for(var i = 0; i < stories.length; i ++){
+            table += "<li>" + this.stories[i]+ "</li>"
+        }
+        table += "</ul></td></tr><tr><td>" + this.goBack+ "</td></tr></table>";
+        return table;
     }
 
 }

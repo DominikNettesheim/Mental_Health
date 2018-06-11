@@ -82,6 +82,10 @@ function constructBipolar(){
     $('#stories').on('click', function(){
         $('#infoTittle').html("Personal accounts of Bipolar");
         $('#information').html(bipolar.constructStories());
+        $('#submitStories').on('click', function () {
+            bipolar.addStory($('#story2a').val());
+            console.log(bipolar.stories);
+        });
         $('#2a').on('click', function(){
             constructBipolar();
         });
@@ -122,6 +126,10 @@ function constructAnxiety(){
     $('#stories').on('click', function(){
         $('#infoTittle').html("Personal accounts of Anxiety");
         $('#information').html(anxiety.constructStories());
+        $('#submitStories').on('click', function () {
+            anxiety.addStory($('#story4a').val());
+            console.log(anxiety.stories);
+        });
         $('#4a').on('click', function(){
             constructAnxiety();
         });
@@ -162,6 +170,10 @@ function constructDepression() {
     $('#stories').on('click', function () {
         $('#infoTittle').html("Personal accounts of Depression");
         $('#information').html(depression.constructStories());
+        $('#submitStories').on('click', function () {
+            depression.addStory($('#story1a').val());
+            console.log(depression.stories);
+        });
         $('#1a').on('click', function () {
             constructDepression();
         })
@@ -201,7 +213,11 @@ function constructADHD (){
     });
     $('#stories').on('click', function(){
         $('#infoTittle').html("Personal accounts of ADHD");
-        $('#information').html(depression.constructStories());
+        $('#information').html(adhd.constructStories());
+        $('#submitStories').on('click', function () {
+            adhd.addStory($('#story3a').val());
+            console.log(adhd.stories);
+        });
         $('#3a').on('click', function(){
             constructADHD();
         });
@@ -242,9 +258,16 @@ function constructAnorexia() {
     $('#stories').on('click', function () {
         $('#infoTittle').html("Personal accounts of Anorexia");
         $('#information').html(anorexia.constructStories());
+        $('#submitStories').on('click', function () {
+            anorexia.addStory($('#story5a').val());
+            console.log(anorexia.stories);
+
+        });
         $('#5a').on('click', function () {
             constructAnorexia();
         });
+        $('#seeStories5a').on('click',function () {
+            $('#information').html(anorexia.showStories(anorexia.stories));
+        })
     })
 }
-
