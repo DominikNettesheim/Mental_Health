@@ -183,10 +183,11 @@ button:hover {
 }
 .submitStory{
     margin: auto;
-    width:400px;
+    width:401px;
     height:150px;
     font-size: large;
     font-family: Garamond;
+
 
 }
 

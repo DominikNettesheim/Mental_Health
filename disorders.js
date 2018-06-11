@@ -56,7 +56,7 @@ function Disorder(image,name,id){
         return table;
     };
     this.constructStories = function(){
-        return "<textarea id='story"+ id+"' rows='5' cols='200' class ='submitStory'></textarea><button id = 'submit"+id+"'  onclick='addStory()'>Submit story</button>"+this.goBack;
+        return "<textarea id='story"+ id+"' rows='5' cols='201' class ='submitStory'></textarea><button id = 'submit"+id+"'  onclick='addStory()'>Submit story</button>"+this.goBack;
     }
 
 }
