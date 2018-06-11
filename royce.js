@@ -1,6 +1,7 @@
 var goBack = "<button id = 'goBack'>Back to options</button>";
 var buttons = "<button id = 'symptoms'>Symptoms</button> <button id ='backGround'>Background</button>  <button id = 'treatments'>Treatments</button> <button id = 'causes'>Causes</button><button id = 'stories'>Personal Stories</button>";
 $(document).ready(function() {
+    $('#confirmation').hide();
     $('#information').hide();
     $('#logInBtn').on('click', function(){
         $('#coverflow').hide();
@@ -85,6 +86,14 @@ function constructBipolar(){
         $('#submitStories').on('click', function () {
             bipolar.addStory($('#story2a').val());
             console.log(bipolar.stories);
+            $('#story2a').val('');
+            alert(["Success! Thank you for sharing your story with us you can see yours and others by pressing 'See stories' below."]);
+            $('#seeStory2a').on('click',function () {
+                $('#information').html(bipolar.showStories(bipolar.stories));
+                $('#2a').on('click', function(){
+                    constructBipolar();
+                });
+            })
         });
         $('#2a').on('click', function(){
             constructBipolar();
@@ -128,7 +137,15 @@ function constructAnxiety(){
         $('#information').html(anxiety.constructStories());
         $('#submitStories').on('click', function () {
             anxiety.addStory($('#story4a').val());
+            $('#story4a').val('');
             console.log(anxiety.stories);
+            alert(["Success! Thank you for sharing your story with us you can see yours and others by pressing 'See stories' below."]);
+            $('#seeStory4a').on('click',function () {
+                $('#information').html(anxiety.showStories(anxiety.stories));
+                $('#4a').on('click', function(){
+                    constructAnxiety();
+                });
+            })
         });
         $('#4a').on('click', function(){
             constructAnxiety();
@@ -170,9 +187,18 @@ function constructDepression() {
     $('#stories').on('click', function () {
         $('#infoTittle').html("Personal accounts of Depression");
         $('#information').html(depression.constructStories());
+        $('#seeStory1a').on('click',function () {
+            $('#information').html(depression.showStories(depression.stories));
+            $('#1a').on('click', function () {
+                constructDepression();
+            })
+        });
         $('#submitStories').on('click', function () {
             depression.addStory($('#story1a').val());
             console.log(depression.stories);
+            $('#story1a').val('');
+            alert(["Success! Thank you for sharing your story with us you can see yours and others by pressing 'See stories' below."]);
+
         });
         $('#1a').on('click', function () {
             constructDepression();
@@ -217,6 +243,14 @@ function constructADHD (){
         $('#submitStories').on('click', function () {
             adhd.addStory($('#story3a').val());
             console.log(adhd.stories);
+            $('#story3a').val('');
+            alert(["Success! Thank you for sharing your story with us you can see yours and others by pressing 'See stories' below."]);
+            $('#seeStory3a').on('click',function () {
+                $('#information').html(adhd.showStories(adhd.stories));
+                $('#3a').on('click', function(){
+                    constructADHD();
+                });
+            })
         });
         $('#3a').on('click', function(){
             constructADHD();
@@ -261,13 +295,17 @@ function constructAnorexia() {
         $('#submitStories').on('click', function () {
             anorexia.addStory($('#story5a').val());
             console.log(anorexia.stories);
-
+            $('#story5a').val('');
+            alert(["Success! Thank you for sharing your story with us you can see yours and others by pressing 'See stories' below."]);
+            $('#seeStory5a').on('click',function () {
+                $('#information').html(anorexia.showStories(anorexia.stories));
+                $('#5a').on('click', function () {
+                    constructAnorexia();
+                });
+            })
         });
         $('#5a').on('click', function () {
             constructAnorexia();
         });
-        $('#seeStories5a').on('click',function () {
-            $('#information').html(anorexia.showStories(anorexia.stories));
-        })
     })
 }

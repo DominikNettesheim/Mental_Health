@@ -18,7 +18,7 @@ function Disorder(image,name,id){
         this.allCauses=causes;
     };
     this.addStory =function(story){
-        this.stories=story;
+        this.stories.push(story);
     };
     this.addBackground = function(backgroundInfo) {
         this.allBackground= backgroundInfo;
