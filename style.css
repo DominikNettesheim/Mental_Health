@@ -1,4 +1,7 @@
 /* cover flow styles */
+body{
+    font-family: Papyrus;
+}
 .ui-coverflow-wrapper{
     height:400px;
 }
@@ -169,6 +172,14 @@ button:hover {
     position: absolute;
     right:25px;
     top:150px;
+
+}
+.submitStory{
+    margin: auto;
+    width:400px;
+    height:150px;
+    font-size: large;
+    font-family: Garamond;
 
 }
 

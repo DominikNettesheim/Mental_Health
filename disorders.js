@@ -56,13 +56,11 @@ function Disorder(image,name,id){
         return table;
     };
     this.constructStories = function(){
-        return "<input id='story"+ id+"' type='text'><button id = 'submit"+id+"' class ='submitStory'>Submit story</button>"+this.goBack;
-
-
+        return "<textarea id='story"+ id+"' rows='5' cols='200' class ='submitStory'></textarea><button id = 'submit"+id+"'  onclick='addStory()'>Submit story</button>"+this.goBack;
     }
 
 }
-var input = "<input id='' type='text'>"
+var input = "<input id='' type='text'>";
 var cancel = "<span id='closeInfo' class=\"close\" title=\"Close Modal\">&times;</span>";
 
 var anorexia= new Disorder("http://www.masteradiccionesonline.com/media/anorexia985-350x350.jpg", "Anorexia","5a");
